@@ -1,8 +1,9 @@
-package br.com.zup.minhamusicafavorita
+package br.com.zup.minhamusicafavorita.detalhes
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.ActivityDetalhesBinding
 
 class DetalhesActivity : AppCompatActivity() {

@@ -1,9 +1,10 @@
-package br.com.zup.minhamusicafavorita
+package br.com.zup.minhamusicafavorita.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.com.zup.minhamusicafavorita.databinding.ActivityMainBinding
+import br.com.zup.minhamusicafavorita.detalhes.DetalhesActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
