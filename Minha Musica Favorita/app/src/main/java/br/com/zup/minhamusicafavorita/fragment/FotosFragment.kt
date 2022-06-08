@@ -6,14 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.zup.minhamusicafavorita.R
+import br.com.zup.minhamusicafavorita.databinding.FragmentFotosBinding
 
 class FotosFragment : Fragment() {
+    private lateinit var binding: FragmentFotosBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fotos, container, false)
+        binding = FragmentFotosBinding.inflate(inflater, container, false)
+        return binding.root
     }
 }

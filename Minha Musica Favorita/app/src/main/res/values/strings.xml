@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">Minha Musica Favorita</string>
     <string name="musica_nome">The Man</string>
-    <string name="letra_musica">"
-        I would be complex, I would be cool
+    <string name="letra_musica">"        \"I would be complex, I would be cool
         They'd say I played the field
         Before I found someone to commit to
         And that would be okay for me to do
@@ -19,11 +18,11 @@
         And I'm so sick of them coming at me again
         'Cause if I was a man, then I'd be the man
         I'd be the man
-        I'd be the man"</string>
+        I'd be the man (...)"\"</string>
     <string name="descricao_imagem">A direita a cantora loira Taylor Swift e a esquerda a escrita \'The Man\' em letras grandes e em baixo o nome Taylor Swift</string>
     <string name="ver_detalhes">Ver Detalhes</string>
     <string name="texto_informacoes_TS">Taylor Swift é uma cantora de country que começou sua carreira com 16 anos, com a música "Tim McGraw", nome de seu cantor predileto. Em 2006, o seu ídolo a chamou para abrir seus shows nos Estados Unidos e com isso a carreira da artista emplacou.</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="detalhe_da_banda">Detalhes da cantora</string>
     <string name="nome_taylor_swift">Taylor Swift</string>
+    <string name="lista_albuns">Lista de álbuns</string>
 </resources>

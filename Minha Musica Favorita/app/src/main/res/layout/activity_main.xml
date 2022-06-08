@@ -14,8 +14,8 @@
             android:id="@+id/imgTaylor"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/altura_250"
-            android:scaleType="fitStart"
             android:contentDescription="@string/descricao_imagem"
+            android:scaleType="fitStart"
             android:src="@drawable/imagem_taylor_swift"
             app:layout_constraintBottom_toTopOf="@id/tvTituloMusica"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,8 +27,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margem_12"
             android:text="@string/musica_nome"
             android:textSize="@dimen/fonte_16"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/tvLetraMusica"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +46,8 @@
             android:textSize="@dimen/fonte_12"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvTituloMusica" />
+            app:layout_constraintTop_toBottomOf="@id/tvTituloMusica"
+            app:layout_constraintBottom_toTopOf="@id/btnDetalhes"/>
 
         <Button
             android:id="@+id/btnDetalhes"
