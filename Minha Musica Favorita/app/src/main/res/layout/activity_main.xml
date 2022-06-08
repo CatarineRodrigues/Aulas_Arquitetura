@@ -13,7 +13,7 @@
         <ImageView
             android:id="@+id/imgTaylor"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/altura_250"
+            android:layout_height="@dimen/tamanho_250"
             android:contentDescription="@string/descricao_imagem"
             android:scaleType="fitStart"
             android:src="@drawable/imagem_taylor_swift"

@@ -13,7 +13,7 @@
         <ImageView
             android:id="@+id/imgTaylorInformacoes"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/altura_250"
+            android:layout_height="@dimen/tamanho_250"
             android:scaleType="centerCrop"
             android:src="@drawable/detalhe_foto"
             app:layout_constraintBottom_toTopOf="@id/tvNomeInformacoes"
