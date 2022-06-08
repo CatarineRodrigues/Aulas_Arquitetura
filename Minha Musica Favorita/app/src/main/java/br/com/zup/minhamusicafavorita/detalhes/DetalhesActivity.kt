@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.ActivityDetalhesBinding
-import br.com.zup.minhamusicafavorita.detalhes.adapter.DetalhesPagerAdapter
+import br.com.zup.minhamusicafavorita.main.adapter.DetalhesPagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
 class DetalhesActivity : AppCompatActivity() {

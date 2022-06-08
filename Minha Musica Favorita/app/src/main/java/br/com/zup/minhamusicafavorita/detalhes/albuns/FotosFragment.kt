@@ -1,20 +1,20 @@
-package br.com.zup.minhamusicafavorita.detalhes.fragment
+package br.com.zup.minhamusicafavorita.detalhes.albuns
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import br.com.zup.minhamusicafavorita.databinding.FragmentInformacoesBinding
+import br.com.zup.minhamusicafavorita.databinding.FragmentFotosBinding
 
-class InformacoesFragment : Fragment() {
-    private lateinit var binding: FragmentInformacoesBinding
+class FotosFragment : Fragment() {
+    private lateinit var binding: FragmentFotosBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentInformacoesBinding.inflate(inflater,container, false)
+        binding = FragmentFotosBinding.inflate(inflater, container, false)
         return binding.root
     }
 }
