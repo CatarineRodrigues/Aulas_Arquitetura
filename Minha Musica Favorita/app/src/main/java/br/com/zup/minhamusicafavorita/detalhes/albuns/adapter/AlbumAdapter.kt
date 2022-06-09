@@ -22,6 +22,15 @@ class AlbumAdapter(
 
     override fun getItemCount() = listaAlbum.size
 
+    fun atualizarListaAlbum(novaLista: MutableList<Album>) {
+        if (listaAlbum.size == 0) {
+            listaAlbum = novaLista
+        } else {
+            listaAlbum.addAll(novaLista)
+        }
+        notifyDataSetChanged()
+    }
+
     class ViewHolder(val binding: AlbumItemBinding): RecyclerView.ViewHolder(binding.root){
         fun exibirAlbunsView(album: Album){
             binding.imgFotoItem.setImageResource(album.getImagem())
