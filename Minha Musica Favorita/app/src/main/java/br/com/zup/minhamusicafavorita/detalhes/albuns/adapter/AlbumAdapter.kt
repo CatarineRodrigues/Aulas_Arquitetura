@@ -1,7 +1,6 @@
 package br.com.zup.minhamusicafavorita.detalhes.albuns.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.minhamusicafavorita.databinding.AlbumItemBinding
@@ -18,15 +17,14 @@ class AlbumAdapter(
 
     override fun onBindViewHolder(holder: AlbumAdapter.ViewHolder, position: Int) {
         val album = listaAlbum[position]
+        holder.exibirAlbunsView(album)
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount() = listaAlbum.size
 
     class ViewHolder(val binding: AlbumItemBinding): RecyclerView.ViewHolder(binding.root){
         fun exibirAlbunsView(album: Album){
-            binding.imgFotoItem
+            binding.imgFotoItem.setImageResource(album.getImagem())
         }
     }
 }
