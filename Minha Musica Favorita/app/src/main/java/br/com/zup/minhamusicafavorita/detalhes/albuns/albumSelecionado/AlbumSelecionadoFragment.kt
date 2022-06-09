@@ -21,9 +21,14 @@ class AlbumSelecionadoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentAlbumSelecionadoBinding.inflate(inflater, container, false)
-        recuperarAlbum()
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        recuperarAlbum()
+    }
+
     private fun recuperarAlbum(){
         val album = arguments?.getParcelable<Album>("Album")
         if (album != null){

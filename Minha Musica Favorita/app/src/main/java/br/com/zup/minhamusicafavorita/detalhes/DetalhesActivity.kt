@@ -1,8 +1,11 @@
 package br.com.zup.minhamusicafavorita.detalhes
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.AttributeSet
 import android.view.MenuItem
+import android.view.View
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.ActivityDetalhesBinding
 import br.com.zup.minhamusicafavorita.detalhes.albuns.AlbunsActivity
@@ -12,7 +15,9 @@ import br.com.zup.minhamusicafavorita.main.adapter.DetalhesPagerAdapter
 import br.com.zup.minhamusicafavorita.model.Album
 import com.google.android.material.tabs.TabLayoutMediator
 
-class DetalhesActivity : AppCompatActivity(), FragmentoClick {
+class DetalhesActivity : AppCompatActivity()
+//    , FragmentoClick
+{
     private lateinit var binding: ActivityDetalhesBinding
     private val listaTopicos = listOf("Informações", "Fotos")
 
@@ -46,14 +51,14 @@ class DetalhesActivity : AppCompatActivity(), FragmentoClick {
         return super.onOptionsItemSelected(item)
     }
 
-    override fun clickFragmento() {
-        val album = Album()
-        AlbumSelecionadoFragment().apply {
-            arguments = Bundle().apply {
-                putParcelable("Album", album)
-            }
-        }
-    }
+//    override fun clickFragmento() {
+//        val album = Album()
+//        AlbumSelecionadoFragment().apply {
+//            arguments = Bundle().apply {
+//                putParcelable("Album", album)
+//            }
+//        }
+//    }
 }
 
 

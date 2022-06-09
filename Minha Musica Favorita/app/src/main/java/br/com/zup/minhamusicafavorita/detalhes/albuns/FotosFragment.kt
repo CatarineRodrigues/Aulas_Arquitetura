@@ -17,6 +17,7 @@ import br.com.zup.minhamusicafavorita.model.Album
 import android.widget.Toast
 import br.com.zup.minhamusicafavorita.detalhes.DetalhesActivity
 import br.com.zup.minhamusicafavorita.detalhes.FragmentoClick
+import br.com.zup.minhamusicafavorita.detalhes.albuns.albumSelecionado.AlbumSelecionadoFragment
 
 class FotosFragment : Fragment() {
     private lateinit var binding: FragmentFotosBinding
@@ -159,7 +160,7 @@ class FotosFragment : Fragment() {
 
     private fun irParaDetalheAlbum(album: Album) {
         val intent  = Intent(context, AlbunsActivity::class.java).apply {
-            putExtra("Heroi", album)
+            putExtra("Album", album)
         }
         startActivity(intent)
     }

@@ -4,12 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".detalhes.albuns.albumSelecionado.AlbumSelecionadoFragment">
+    tools:context=".detalhes.albuns.albumSelecionado.AlbumSelecionadoFragment"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:backgroundTint="@color/cor_primaria">
 
         <ImageView
             android:id="@+id/imgAlbum"

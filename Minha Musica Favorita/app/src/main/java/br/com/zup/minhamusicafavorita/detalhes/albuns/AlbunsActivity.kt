@@ -1,15 +1,12 @@
 package br.com.zup.minhamusicafavorita.detalhes.albuns
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.ActivityAlbunsBinding
-import br.com.zup.minhamusicafavorita.detalhes.FragmentoClick
 import br.com.zup.minhamusicafavorita.detalhes.albuns.albumSelecionado.AlbumSelecionadoFragment
 import br.com.zup.minhamusicafavorita.model.Album
-import kotlinx.android.parcel.Parcelize
 
 class AlbunsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAlbunsBinding
@@ -18,12 +15,7 @@ class AlbunsActivity : AppCompatActivity() {
         binding = ActivityAlbunsBinding.inflate(layoutInflater)
         setContentView(binding.root)
         acessarActionBar()
-
         recuperarAlbumSelecionado()
-        supportFragmentManager
-            .beginTransaction()
-            .add(binding.container.id, AlbumSelecionadoFragment())
-            .commit()
     }
 
     private fun acessarActionBar() {
@@ -38,10 +30,24 @@ class AlbunsActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
     private fun recuperarAlbumSelecionado() {
         val album = intent.getParcelableExtra<Album>("Album")
-////        binding.container.id =
-            supportFragmentManager.getFragment(Bundle(), "Album")
+        if (album != null) {
+            enviarDadosParaFragmento(album)
+        }
+    }
+
+    private fun enviarDadosParaFragmento(album: Album) {
+        val fragmentoAlbumSelecionado = AlbumSelecionadoFragment().apply {
+            arguments = Bundle().apply {
+                putParcelable("Album", album)
+            }
+        }
+        supportFragmentManager
+            .beginTransaction()
+            .add(binding.container.id, fragmentoAlbumSelecionado)
+            .commit()
     }
 }
 
