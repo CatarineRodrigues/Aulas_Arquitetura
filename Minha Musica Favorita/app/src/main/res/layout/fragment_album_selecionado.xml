@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".detalhes.albuns.albumSelecionado.AlbumSelecionadoFragment">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -13,42 +14,85 @@
         <ImageView
             android:id="@+id/imgAlbum"
             android:layout_width="250dp"
-            android:layout_height="250dp"/>
+            android:layout_height="250dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvNomeAlbum"
+            android:layout_margin="@dimen/margem_12"/>
 
         <TextView
             android:id="@+id/tvNomeAlbum"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgAlbum"
+            app:layout_constraintBottom_toTopOf="@id/tvDetalheAlbum"/>
 
         <TextView
             android:id="@+id/tvDetalheAlbum"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNomeAlbum"
+            app:layout_constraintBottom_toTopOf="@id/tvArtista"/>
 
         <TextView
             android:id="@+id/tvArtista"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDetalheAlbum"
+            app:layout_constraintBottom_toTopOf="@id/tvLançamento" />
 
         <TextView
             android:id="@+id/tvLançamento"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvArtista"
+            app:layout_constraintBottom_toTopOf="@id/tvEstudio"/>
 
         <TextView
             android:id="@+id/tvEstudio"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLançamento"
+            app:layout_constraintBottom_toTopOf="@id/tvFormato"/>
 
         <TextView
             android:id="@+id/tvFormato"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEstudio"
+            app:layout_constraintBottom_toTopOf="@id/tvGenero"/>
 
         <TextView
             android:id="@+id/tvGenero"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFormato"
+            app:layout_constraintBottom_toTopOf="@id/imCoracao" />
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/imCoracao"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_favoritar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/margem_12"
+            app:layout_constraintTop_toBottomOf="@id/tvGenero"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
