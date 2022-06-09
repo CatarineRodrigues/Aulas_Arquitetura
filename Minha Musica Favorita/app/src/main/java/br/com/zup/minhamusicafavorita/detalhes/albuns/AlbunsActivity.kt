@@ -1,10 +1,12 @@
 package br.com.zup.minhamusicafavorita.detalhes.albuns
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.ActivityAlbunsBinding
+import br.com.zup.minhamusicafavorita.model.Album
 
 class AlbunsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAlbunsBinding
@@ -26,5 +28,12 @@ class AlbunsActivity : AppCompatActivity() {
             return true
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun irParaDetalheAlbum(album: Album) {
+        val intent = Intent(this, AlbunsActivity::class.java).apply {
+            putExtra("Album", album)
+        }
+        startActivity(intent)
     }
 }

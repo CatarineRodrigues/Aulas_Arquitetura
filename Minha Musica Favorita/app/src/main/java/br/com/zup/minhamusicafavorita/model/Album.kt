@@ -1,5 +1,9 @@
 package br.com.zup.minhamusicafavorita.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 class Album(
     private var imagem: Int,
     private var artista: String,
@@ -8,7 +12,7 @@ class Album(
     private var estudio: String,
     private var formato: String,
     private var genero: String
-) {
+) : Parcelable {
     fun getImagem() = this.imagem
     fun getArtista() = this.artista
     fun getLancamento() = this.lancamento

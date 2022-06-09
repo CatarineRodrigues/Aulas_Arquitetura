@@ -1,5 +1,6 @@
 package br.com.zup.minhamusicafavorita.detalhes.albuns
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,10 +13,11 @@ import br.com.zup.minhamusicafavorita.databinding.FragmentFotosBinding
 import br.com.zup.minhamusicafavorita.detalhes.albuns.adapter.AlbumAdapter
 import br.com.zup.minhamusicafavorita.model.Album
 
+import android.content.Intent
 class FotosFragment : Fragment() {
     private lateinit var binding: FragmentFotosBinding
     private val albumAdapter: AlbumAdapter by lazy {
-        AlbumAdapter(arrayListOf())
+        AlbumAdapter(arrayListOf(), ::irParaDetalheAlbum)
     }
 
     override fun onCreateView(
@@ -126,4 +128,15 @@ class FotosFragment : Fragment() {
         binding.rvListaAlbums.adapter = albumAdapter
         binding.rvListaAlbums.layoutManager = GridLayoutManager(context, 2)
     }
+
+    private fun irParaDetalheAlbum(album: Album) {
+
+        val intent = Intent(this, AlbunsActivity::class.java).apply {
+            putExtra("Album", album)
+        }
+        startActivity(intent)
+    }
+
+
+
 }
