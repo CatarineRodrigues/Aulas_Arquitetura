@@ -5,10 +5,14 @@ import android.os.Bundle
 import android.view.MenuItem
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.ActivityDetalhesBinding
+import br.com.zup.minhamusicafavorita.detalhes.albuns.AlbunsActivity
+import br.com.zup.minhamusicafavorita.detalhes.albuns.FotosFragment
+import br.com.zup.minhamusicafavorita.detalhes.albuns.albumSelecionado.AlbumSelecionadoFragment
 import br.com.zup.minhamusicafavorita.main.adapter.DetalhesPagerAdapter
+import br.com.zup.minhamusicafavorita.model.Album
 import com.google.android.material.tabs.TabLayoutMediator
 
-class DetalhesActivity : AppCompatActivity() {
+class DetalhesActivity : AppCompatActivity(), FragmentoClick {
     private lateinit var binding: ActivityDetalhesBinding
     private val listaTopicos = listOf("Informações", "Fotos")
 
@@ -21,7 +25,8 @@ class DetalhesActivity : AppCompatActivity() {
     }
 
     private fun exibirViewPagerTabLayout() {
-        val detalhesPagerAdapter = DetalhesPagerAdapter(supportFragmentManager, lifecycle, listaTopicos)
+        val detalhesPagerAdapter =
+            DetalhesPagerAdapter(supportFragmentManager, lifecycle, listaTopicos)
         binding.vpDetalhe.adapter = detalhesPagerAdapter
         TabLayoutMediator(binding.tlDetalhe, binding.vpDetalhe) { tab, position ->
             tab.text = listaTopicos[position]
@@ -40,4 +45,22 @@ class DetalhesActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+    override fun clickFragmento() {
+        val album = Album()
+        AlbumSelecionadoFragment().apply {
+            arguments = Bundle().apply {
+                putParcelable("Album", album)
+            }
+        }
+    }
 }
+
+
+//
+//        supportFragmentManager.beginTransaction().replace(FotosFragment, AlbumSelecionadoFragment )
+//
+//            .addToBackStack("Fotos")
+//            .commit()
+
+

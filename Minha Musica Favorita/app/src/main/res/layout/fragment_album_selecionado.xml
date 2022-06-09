@@ -25,6 +25,7 @@
             android:id="@+id/tvNomeAlbum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Album"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imgAlbum"
@@ -32,44 +33,59 @@
 
         <TextView
             android:id="@+id/tvDetalheAlbum"
+            android:text="Detalhe Album"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvNomeAlbum"
-            app:layout_constraintBottom_toTopOf="@id/tvArtista"/>
+            app:layout_constraintBottom_toTopOf="@id/tvCantora"/>
 
         <TextView
-            android:id="@+id/tvArtista"
+            android:id="@+id/tvCantora"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Cantora"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvDetalheAlbum"
-            app:layout_constraintBottom_toTopOf="@id/tvLançamento" />
+            app:layout_constraintBottom_toTopOf="@id/tvLancamento" />
 
         <TextView
-            android:id="@+id/tvLançamento"
+            android:id="@+id/tvLancamento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Ano lançamento"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvArtista"
+            app:layout_constraintTop_toBottomOf="@id/tvCantora"
+            app:layout_constraintBottom_toTopOf="@id/tvGravadora"/>
+
+        <TextView
+            android:id="@+id/tvGravadora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gravadora"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLancamento"
             app:layout_constraintBottom_toTopOf="@id/tvEstudio"/>
 
         <TextView
             android:id="@+id/tvEstudio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Estudio"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvLançamento"
+            app:layout_constraintTop_toBottomOf="@id/tvGravadora"
             app:layout_constraintBottom_toTopOf="@id/tvFormato"/>
 
         <TextView
             android:id="@+id/tvFormato"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Formato"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvEstudio"
@@ -79,6 +95,7 @@
             android:id="@+id/tvGenero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Genero"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvFormato"

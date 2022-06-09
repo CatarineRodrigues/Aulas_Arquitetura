@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MinhaMusicaFavorita"
         tools:targetApi="31" >
         <activity
-            android:name=".AlbunsActivity"
+            android:name=".detalhes.albuns.AlbunsActivity"
             android:exported="false" />
         <activity
             android:name=".detalhes.DetalhesActivity"
