@@ -41,20 +41,14 @@ class AlbumSelecionadoFragment : Fragment() {
         binding.tvFormato.text = album.getFormato()
         binding.tvGenero.text = album.getGenero()
     }
-
-//    "Evermore",
-//                "Taylor Swift",
-//                2020,
-//                "Republic Records",
-//                "Vários",
-//                "CD; download digital; LP; streaming",
-//                "Country; pop; eletrônico"
-//    private fun recuperarAlbumSelecionado(){
-//        val heroi = arguments?.getParcelableExtra<Album>("Album")
-//
-//        if (heroi != null){
-//            binding.tvNomeHeroi.text = heroi.getNome()
-//            binding.tvInformacaoHeroi.text = heroi.getDescricao()
-//        }
-//    }
 }
+
+/*
+    private fun recuperarAlbumSelecionado(){
+        val heroi = arguments?.getParcelableExtra<Album>("Album")
+
+        if (heroi != null){
+            binding.tvNomeHeroi.text = heroi.getNome()
+            binding.tvInformacaoHeroi.text = heroi.getDescricao()
+        }
+    }*/

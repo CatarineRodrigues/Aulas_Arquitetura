@@ -19,16 +19,16 @@ class AlbunsActivity : AppCompatActivity() {
         setContentView(binding.root)
         acessarActionBar()
 
+        recuperarAlbumSelecionado()
         supportFragmentManager
             .beginTransaction()
             .add(binding.container.id, AlbumSelecionadoFragment())
             .commit()
-        recuperarAlbumSelecionado()
     }
 
     private fun acessarActionBar() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle(R.string.detalhe_da_banda)
+        supportActionBar?.setTitle(R.string.detalhe_do_Album)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -38,17 +38,16 @@ class AlbunsActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-
-//    private fun irParaDetalheAlbum(album: Album) {
-//        val intent = Intent(this, AlbunsActivity::class.java).apply {
-//            putExtra("Album", album)
-//        }
-//        startActivity(intent)
-//    }
-
     private fun recuperarAlbumSelecionado() {
         val album = intent.getParcelableExtra<Album>("Album")
-//        binding.container.id =
+////        binding.container.id =
             supportFragmentManager.getFragment(Bundle(), "Album")
     }
 }
+
+/*    private fun irParaDetalheAlbum(album: Album) {
+        val intent = Intent(this, AlbunsActivity::class.java).apply {
+            putExtra("Album", album)
+        }
+        startActivity(intent)
+    }*/

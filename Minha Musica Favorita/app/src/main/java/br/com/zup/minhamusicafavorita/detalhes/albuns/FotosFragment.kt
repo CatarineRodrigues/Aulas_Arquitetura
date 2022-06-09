@@ -20,7 +20,7 @@ import br.com.zup.minhamusicafavorita.detalhes.FragmentoClick
 
 class FotosFragment : Fragment() {
     private lateinit var binding: FragmentFotosBinding
-    private lateinit var interfaceClick: FragmentoClick
+//    private lateinit var interfaceClick: FragmentoClick
     private val albumAdapter: AlbumAdapter by lazy {
         AlbumAdapter(arrayListOf(), ::irParaDetalheAlbum)
     }
@@ -162,26 +162,27 @@ class FotosFragment : Fragment() {
             putExtra("Heroi", album)
         }
         startActivity(intent)
+    }
+}
 
-//        binding.rvListaAlbums.setOnClickListener {
-//            interfaceClick.clickFragmento()
-//        }
+
+
+/*
+        binding.rvListaAlbums.setOnClickListener {
+            interfaceClick.clickFragmento()
+        }
+    private fun irParaDetalheHeroi(heroi: Heroi) {
+        val intent  = Intent(this, DetalheActivity::class.java).apply {
+            putExtra("Heroi", heroi)
+        }
+        startActivity(intent)
     }
 
-//    private fun irParaDetalheHeroi(heroi: Heroi) {
-//        val intent  = Intent(this, DetalheActivity::class.java).apply {
-//            putExtra("Heroi", heroi)
-//        }
-//        startActivity(intent)
-//    }
-
-//    override fun onAttach(context: Context) {
-//        super.onAttach(context)
-//        try {
-//            interfaceClick = context as DetalhesActivity
-//        } catch (e: Exception) {
-//            Log.i("Erro", "Erro na inicialização da interface ${e.message}")
-//        }
-//    }
-
-}
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        try {
+            interfaceClick = context as DetalhesActivity
+        } catch (e: Exception) {
+            Log.i("Erro", "Erro na inicialização da interface ${e.message}")
+        }
+    }*/
