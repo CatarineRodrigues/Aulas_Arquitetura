@@ -161,7 +161,7 @@ class FotosFragment : Fragment() {
 
     private fun irParaDetalheAlbum(album: Album) {
         val intent = Intent(context, AlbunsActivity::class.java).apply {
-            putExtra("Album", album)
+            putExtra(ALBUM_KEY, album)
         }
         startActivity(intent)
     }

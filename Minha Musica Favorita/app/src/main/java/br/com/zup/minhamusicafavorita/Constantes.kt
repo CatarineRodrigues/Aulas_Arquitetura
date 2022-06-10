@@ -1,5 +1,14 @@
 package br.com.zup.minhamusicafavorita
 
+const val ALBUM_KEY = "Album"
+
+const val TEXT_ARTISTA = "Artista: "
+const val TEXT_LANCAMENTO = "Lançamento: "
+const val TEXT_GRAVADORA = "Gravadora: "
+const val TEXT_ESTUDIO = "Estúdio(s): "
+const val TEXT_FORMATO = "Formato(s): "
+const val TEXT_GENERO = "Gêneros: "
+
 const val ALBUM1_IMAGEM = R.drawable.img_album_tf
 const val ALBUM1_NOME_ALBUM = "Taylor Swift"
 const val ALBUM1_DESCICAO_ALBUM = "Taylor Swift é o álbum de estreia homônimo da cantora e compositora estadunidense Taylor Swift, lançado através da Big Machine Records em 24 de outubro de 2006. O álbum conta com a produção de Nathan Chapman, Robert Ellis Orrall e Angelo Petraglia, e traz composições assinadas pela própria Swift em parceria com Liz Rose e os também produtores Orrall e Petraglia. As canções possuem como temática lírica relacionamentos vivenciados por Swift e por pessoas próximas a ela, e foram escritas pela cantora a partir de seus 12 anos de idade."
