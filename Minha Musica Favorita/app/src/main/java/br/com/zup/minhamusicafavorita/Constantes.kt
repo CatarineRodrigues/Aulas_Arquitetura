@@ -1,6 +1,7 @@
 package br.com.zup.minhamusicafavorita
 
 const val ALBUM_KEY = "Album"
+const val FAVORITADO = "Álbum favoritado com sucesso"
 
 const val TEXT_ARTISTA = "Artista: "
 const val TEXT_LANCAMENTO = "Lançamento: "
