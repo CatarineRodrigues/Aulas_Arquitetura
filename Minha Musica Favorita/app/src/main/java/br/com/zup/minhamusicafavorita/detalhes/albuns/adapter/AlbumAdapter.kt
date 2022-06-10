@@ -9,7 +9,7 @@ import br.com.zup.minhamusicafavorita.model.Album
 class AlbumAdapter(
     private var listaAlbum: MutableList<Album>,
     private val clickAlbum: (album: Album) -> Unit
-): RecyclerView.Adapter<AlbumAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<AlbumAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = AlbumItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -35,8 +35,8 @@ class AlbumAdapter(
         notifyDataSetChanged()
     }
 
-    class ViewHolder(val binding: AlbumItemBinding): RecyclerView.ViewHolder(binding.root){
-        fun exibirAlbunsView(album: Album){
+    class ViewHolder(val binding: AlbumItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun exibirAlbunsView(album: Album) {
             binding.imgFotoItem.setImageResource(album.getImagem())
         }
     }

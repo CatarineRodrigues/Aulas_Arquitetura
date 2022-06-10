@@ -47,13 +47,7 @@ class AlbunsActivity : AppCompatActivity() {
         supportFragmentManager
             .beginTransaction()
             .add(binding.container.id, fragmentoAlbumSelecionado)
+            .addToBackStack("Detalhes")
             .commit()
     }
 }
-
-/*    private fun irParaDetalheAlbum(album: Album) {
-        val intent = Intent(this, AlbunsActivity::class.java).apply {
-            putExtra("Album", album)
-        }
-        startActivity(intent)
-    }*/

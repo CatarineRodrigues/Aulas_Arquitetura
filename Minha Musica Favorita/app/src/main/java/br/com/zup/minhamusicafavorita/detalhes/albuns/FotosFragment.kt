@@ -1,27 +1,19 @@
 package br.com.zup.minhamusicafavorita.detalhes.albuns
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.FragmentFotosBinding
 import br.com.zup.minhamusicafavorita.detalhes.albuns.adapter.AlbumAdapter
 import br.com.zup.minhamusicafavorita.model.Album
-import android.widget.Toast
-import br.com.zup.minhamusicafavorita.detalhes.DetalhesActivity
-import br.com.zup.minhamusicafavorita.detalhes.FragmentoClick
-import br.com.zup.minhamusicafavorita.detalhes.albuns.albumSelecionado.AlbumSelecionadoFragment
 
 class FotosFragment : Fragment() {
     private lateinit var binding: FragmentFotosBinding
-//    private lateinit var interfaceClick: FragmentoClick
     private val albumAdapter: AlbumAdapter by lazy {
         AlbumAdapter(arrayListOf(), ::irParaDetalheAlbum)
     }
@@ -159,31 +151,9 @@ class FotosFragment : Fragment() {
     }
 
     private fun irParaDetalheAlbum(album: Album) {
-        val intent  = Intent(context, AlbunsActivity::class.java).apply {
+        val intent = Intent(context, AlbunsActivity::class.java).apply {
             putExtra("Album", album)
         }
         startActivity(intent)
     }
 }
-
-
-
-/*
-        binding.rvListaAlbums.setOnClickListener {
-            interfaceClick.clickFragmento()
-        }
-    private fun irParaDetalheHeroi(heroi: Heroi) {
-        val intent  = Intent(this, DetalheActivity::class.java).apply {
-            putExtra("Heroi", heroi)
-        }
-        startActivity(intent)
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        try {
-            interfaceClick = context as DetalhesActivity
-        } catch (e: Exception) {
-            Log.i("Erro", "Erro na inicialização da interface ${e.message}")
-        }
-    }*/
