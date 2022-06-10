@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
-import br.com.zup.minhamusicafavorita.R
+import br.com.zup.minhamusicafavorita.*
 import br.com.zup.minhamusicafavorita.databinding.FragmentFotosBinding
 import br.com.zup.minhamusicafavorita.detalhes.albuns.adapter.AlbumAdapter
 import br.com.zup.minhamusicafavorita.model.Album
@@ -36,110 +36,119 @@ class FotosFragment : Fragment() {
         val listaNovaAlbum = mutableListOf<Album>()
         listaNovaAlbum.add(
             Album(
-                R.drawable.img_album_tf,
-                "Taylor Swift",
-                "Taylor Swift",
-                2006,
-                "Big Machine Records",
-                "Vários",
-                "CD; download digital; LP; streaming",
-                "Música pop, Country pop"
+                ALBUM1_IMAGEM,
+                ALBUM1_NOME_ALBUM,
+                ALBUM1_DESCICAO_ALBUM,
+                ALBUM1_ARTISTA,
+                ALBUM1_LANCAMENTO,
+                ALBUM1_GRAVADORA,
+                ALBUM1_ESTUDIO,
+                ALBUM1_FORMATO,
+                ALBUM1_GENERO
             )
         )
         listaNovaAlbum.add(
             Album(
-                R.drawable.img_album_fearless,
-                "Fearless",
-                "Taylor Swift",
-                2008,
-                "Big Machine Records",
-                "Vários",
-                "CD; download digital; LP; streaming",
-                "Country pop"
+                ALBUM2_IMAGEM,
+                ALBUM2_NOME_ALBUM,
+                ALBUM2_DESCICAO_ALBUM,
+                ALBUM2_ARTISTA,
+                ALBUM2_LANCAMENTO,
+                ALBUM2_GRAVADORA,
+                ALBUM2_ESTUDIO,
+                ALBUM2_FORMATO,
+                ALBUM2_GENERO
             )
         )
         listaNovaAlbum.add(
             Album(
-                R.drawable.img_album_speak_now,
-                "Speak Now",
-                "Taylor Swift",
-                2010,
-                "lBig Machine Records",
-                "Vários",
-                "CD; download digital; LP; streaming",
-                "pop"
+                ALBUM3_IMAGEM,
+                ALBUM3_NOME_ALBUM,
+                ALBUM3_DESCICAO_ALBUM,
+                ALBUM3_ARTISTA,
+                ALBUM3_LANCAMENTO,
+                ALBUM3_GRAVADORA,
+                ALBUM3_ESTUDIO,
+                ALBUM3_FORMATO,
+                ALBUM3_GENERO
             )
         )
         listaNovaAlbum.add(
             Album(
-                R.drawable.img_album_red,
-                "Red",
-                "Taylor Swift",
-                2012,
-                "lBig Machine Records",
-                "Vários",
-                "CD; download digital; LP; streaming",
-                "Pop, Rock, Country pop, Pop rock"
+                ALBUM4_IMAGEM,
+                ALBUM4_NOME_ALBUM,
+                ALBUM4_DESCICAO_ALBUM,
+                ALBUM4_ARTISTA,
+                ALBUM4_LANCAMENTO,
+                ALBUM4_GRAVADORA,
+                ALBUM4_ESTUDIO,
+                ALBUM4_FORMATO,
+                ALBUM4_GENERO
             )
         )
         listaNovaAlbum.add(
             Album(
-                R.drawable.img_album_1989,
-                "1989",
-                "Taylor Swift",
-                2014,
-                "Big Machine Records",
-                "Vários",
-                "CD; download digital; LP; streaming",
-                "Pop, Synthpop; Electropop"
+                ALBUM5_IMAGEM,
+                ALBUM5_NOME_ALBUM,
+                ALBUM5_DESCICAO_ALBUM,
+                ALBUM5_ARTISTA,
+                ALBUM5_LANCAMENTO,
+                ALBUM5_GRAVADORA,
+                ALBUM5_ESTUDIO,
+                ALBUM5_FORMATO,
+                ALBUM5_GENERO
             )
         )
         listaNovaAlbum.add(
             Album(
-                R.drawable.img_album_reputation,
-                "Reputation",
-                "Taylor Swift",
-                2017,
-                "Big Machine Records",
-                "Vários",
-                "CD; download digital; LP; streaming",
-                "Pop; Synthpop; Electropop"
+                ALBUM6_IMAGEM,
+                ALBUM6_NOME_ALBUM,
+                ALBUM6_DESCICAO_ALBUM,
+                ALBUM6_ARTISTA,
+                ALBUM6_LANCAMENTO,
+                ALBUM6_GRAVADORA,
+                ALBUM6_ESTUDIO,
+                ALBUM6_FORMATO,
+                ALBUM6_GENERO
             )
         )
         listaNovaAlbum.add(
             Album(
-                R.drawable.img_album_lover,
-                "Lover",
-                "Taylor Swift",
-                2019,
-                "Republic Records",
-                "Vários",
-                "CD; download digital; LP; streaming",
-                "Pop; Synthpop; Electropop"
+                ALBUM7_IMAGEM,
+                ALBUM7_NOME_ALBUM,
+                ALBUM7_DESCICAO_ALBUM,
+                ALBUM7_ARTISTA,
+                ALBUM7_LANCAMENTO,
+                ALBUM7_GRAVADORA,
+                ALBUM7_ESTUDIO,
+                ALBUM7_FORMATO,
+                ALBUM7_GENERO
             )
         )
         listaNovaAlbum.add(
             Album(
-                R.drawable.img_album_folklore,
-                "Folklore",
-                "Taylor Swift",
-                2020,
-                "Republic Records",
-                "Vários",
-                "CD; download digital; LP; streaming",
-                "Indie folk; rock alternativo; electro-folk; chamber pop"
+                ALBUM8_IMAGEM,
+                ALBUM8_NOME_ALBUM,
+                ALBUM8_DESCICAO_ALBUM,
+                ALBUM8_ARTISTA,
+                ALBUM8_LANCAMENTO,
+                ALBUM8_GRAVADORA,
+                ALBUM8_ESTUDIO,
+                ALBUM8_FORMATO,
+                ALBUM8_GENERO
             )
         )
         listaNovaAlbum.add(
             Album(
-                R.drawable.img_album_evermore,
-                "Evermore",
-                "Taylor Swift",
-                2020,
-                "Republic Records",
-                "Vários",
-                "CD; download digital; LP; streaming",
-                "Country; pop; eletrônico"
+                ALBUM9_IMAGEM,
+                ALBUM9_NOME_ALBUM,
+                ALBUM9_DESCICAO_ALBUM,
+                ALBUM9_ARTISTA,
+                ALBUM9_LANCAMENTO,
+                ALBUM9_GRAVADORA,
+                ALBUM9_ESTUDIO,
+                ALBUM9_FORMATO,
+                ALBUM9_GENERO
             )
         )
         albumAdapter.atualizarListaAlbum(listaNovaAlbum)
