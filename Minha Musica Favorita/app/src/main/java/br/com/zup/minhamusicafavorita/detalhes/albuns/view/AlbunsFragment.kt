@@ -1,4 +1,4 @@
-package br.com.zup.minhamusicafavorita.detalhes.albuns
+package br.com.zup.minhamusicafavorita.detalhes.albuns.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,12 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import br.com.zup.minhamusicafavorita.*
-import br.com.zup.minhamusicafavorita.databinding.FragmentFotosBinding
-import br.com.zup.minhamusicafavorita.detalhes.albuns.adapter.AlbumAdapter
-import br.com.zup.minhamusicafavorita.model.Album
+import br.com.zup.minhamusicafavorita.databinding.FragmentAlbunsBinding
+import br.com.zup.minhamusicafavorita.detalhes.albuns.view.adapter.AlbumAdapter
+import br.com.zup.minhamusicafavorita.detalhes.albuns.model.Album
 
-class FotosFragment : Fragment() {
-    private lateinit var binding: FragmentFotosBinding
+class AlbunsFragment : Fragment() {
+    private lateinit var binding: FragmentAlbunsBinding
     private val albumAdapter: AlbumAdapter by lazy {
         AlbumAdapter(arrayListOf(), ::irParaDetalheAlbum)
     }
@@ -22,7 +22,7 @@ class FotosFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentFotosBinding.inflate(inflater, container, false)
+        binding = FragmentAlbunsBinding.inflate(inflater, container, false)
         return binding.root
     }
 

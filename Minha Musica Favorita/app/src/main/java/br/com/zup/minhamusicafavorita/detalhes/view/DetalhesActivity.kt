@@ -1,16 +1,16 @@
-package br.com.zup.minhamusicafavorita.detalhes
+package br.com.zup.minhamusicafavorita.detalhes.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.ActivityDetalhesBinding
-import br.com.zup.minhamusicafavorita.main.adapter.DetalhesPagerAdapter
+import br.com.zup.minhamusicafavorita.detalhes.view.adapter.DetalhesPagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
 class DetalhesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetalhesBinding
-    private val listaTopicos = listOf("Informações", "Fotos")
+    private val listaTopicos = listOf("Informações", "Albuns")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
