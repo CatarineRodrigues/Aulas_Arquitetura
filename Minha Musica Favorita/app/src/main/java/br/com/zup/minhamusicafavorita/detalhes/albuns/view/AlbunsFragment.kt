@@ -6,21 +6,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import br.com.zup.minhamusicafavorita.*
 import br.com.zup.minhamusicafavorita.databinding.FragmentAlbunsBinding
 import br.com.zup.minhamusicafavorita.detalhes.albuns.view.adapter.AlbumAdapter
 import br.com.zup.minhamusicafavorita.detalhes.albuns.model.Album
+import br.com.zup.minhamusicafavorita.detalhes.albuns.viewmodel.AlbumViewModel
 
 class AlbunsFragment : Fragment() {
     private lateinit var binding: FragmentAlbunsBinding
     private val albumAdapter: AlbumAdapter by lazy {
         AlbumAdapter(arrayListOf(), ::irParaDetalheAlbum)
     }
+    private val viewModel by lazy {
+        ViewModelProvider(this)[AlbumViewModel::class.java]
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         binding = FragmentAlbunsBinding.inflate(inflater, container, false)
         return binding.root

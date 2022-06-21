@@ -3,6 +3,8 @@ package br.com.zup.minhamusicafavorita.detalhes.albuns.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import br.com.zup.minhamusicafavorita.ALBUM_KEY
+import br.com.zup.minhamusicafavorita.DETALHES_KEY
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.ActivityAlbunsBinding
 import br.com.zup.minhamusicafavorita.detalhes.albuns.albumSelecionado.view.AlbumSelecionadoFragment
@@ -32,7 +34,7 @@ class AlbunsActivity : AppCompatActivity() {
     }
 
     private fun recuperarAlbumSelecionado() {
-        val album = intent.getParcelableExtra<Album>("Album")
+        val album = intent.getParcelableExtra<Album>(ALBUM_KEY)
         if (album != null) {
             enviarDadosParaFragmento(album)
         }
@@ -41,13 +43,13 @@ class AlbunsActivity : AppCompatActivity() {
     private fun enviarDadosParaFragmento(album: Album) {
         val fragmentoAlbumSelecionado = AlbumSelecionadoFragment().apply {
             arguments = Bundle().apply {
-                putParcelable("Album", album)
+                putParcelable(ALBUM_KEY, album)
             }
         }
         supportFragmentManager
             .beginTransaction()
             .add(binding.container.id, fragmentoAlbumSelecionado)
-            .addToBackStack("Detalhes")
+            .addToBackStack(DETALHES_KEY)
             .commit()
     }
 }

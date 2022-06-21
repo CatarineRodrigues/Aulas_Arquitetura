@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-class Album(
+data class Album(
     private var imagem: Int,
     private var nomeAlbum: String,
     private var descricaoAlbum: String,
