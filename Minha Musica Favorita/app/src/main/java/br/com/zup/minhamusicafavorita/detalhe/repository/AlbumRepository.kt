@@ -1,7 +1,7 @@
-package br.com.zup.minhamusicafavorita.detalhes.albuns.repository
+package br.com.zup.minhamusicafavorita.detalhe.repository
 
 import br.com.zup.minhamusicafavorita.*
-import br.com.zup.minhamusicafavorita.detalhes.albuns.model.Album
+import br.com.zup.minhamusicafavorita.detalhe.model.Album
 
 class AlbumRepository {
     fun getListAlbum(): List<Album> {

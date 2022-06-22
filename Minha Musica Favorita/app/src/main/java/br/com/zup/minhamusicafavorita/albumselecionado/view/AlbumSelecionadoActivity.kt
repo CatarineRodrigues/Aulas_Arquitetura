@@ -1,4 +1,4 @@
-package br.com.zup.minhamusicafavorita.detalhes.albuns.view
+package br.com.zup.minhamusicafavorita.albumselecionado.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,15 +6,14 @@ import android.view.MenuItem
 import br.com.zup.minhamusicafavorita.ALBUM_KEY
 import br.com.zup.minhamusicafavorita.DETALHES_KEY
 import br.com.zup.minhamusicafavorita.R
-import br.com.zup.minhamusicafavorita.databinding.ActivityAlbunsBinding
-import br.com.zup.minhamusicafavorita.detalhes.albuns.albumSelecionado.view.AlbumSelecionadoFragment
-import br.com.zup.minhamusicafavorita.detalhes.albuns.model.Album
+import br.com.zup.minhamusicafavorita.databinding.ActivityAlbumSelecionadoBinding
+import br.com.zup.minhamusicafavorita.detalhe.model.Album
 
-class AlbunsActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityAlbunsBinding
+class AlbumSelecionadoActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityAlbumSelecionadoBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAlbunsBinding.inflate(layoutInflater)
+        binding = ActivityAlbumSelecionadoBinding.inflate(layoutInflater)
         setContentView(binding.root)
         acessarActionBar()
         recuperarAlbumSelecionado()

@@ -1,4 +1,4 @@
-package br.com.zup.minhamusicafavorita.detalhes.informacoes.view
+package br.com.zup.minhamusicafavorita.detalhe.view.fragment.informacoes
 
 import android.os.Bundle
 import android.view.LayoutInflater

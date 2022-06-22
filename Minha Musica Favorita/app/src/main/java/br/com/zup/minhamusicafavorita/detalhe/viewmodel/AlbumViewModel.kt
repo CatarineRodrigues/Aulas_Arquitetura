@@ -1,11 +1,11 @@
-package br.com.zup.minhamusicafavorita.detalhes.albuns.viewmodel
+package br.com.zup.minhamusicafavorita.detalhe.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import br.com.zup.minhamusicafavorita.detalhes.albuns.model.Album
-import br.com.zup.minhamusicafavorita.detalhes.albuns.repository.AlbumRepository
+import br.com.zup.minhamusicafavorita.detalhe.model.Album
+import br.com.zup.minhamusicafavorita.detalhe.repository.AlbumRepository
 
 class AlbumViewModel() : ViewModel() {
     private val repository = AlbumRepository()

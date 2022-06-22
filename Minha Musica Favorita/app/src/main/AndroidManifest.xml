@@ -14,10 +14,10 @@
         android:theme="@style/Theme.MinhaMusicaFavorita"
         tools:targetApi="31" >
         <activity
-            android:name=".detalhes.albuns.view.AlbunsActivity"
+            android:name=".albumselecionado.view.AlbumSelecionadoActivity"
             android:exported="false" />
         <activity
-            android:name=".detalhes.view.DetalhesActivity"
+            android:name=".detalhe.view.DetalhesActivity"
             android:exported="false" />
         <activity
             android:name=".home.view.HomeActivity"

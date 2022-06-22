@@ -1,4 +1,4 @@
-package br.com.zup.minhamusicafavorita.detalhes.albuns.view
+package br.com.zup.minhamusicafavorita.detalhe.view.fragment.album
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,14 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import br.com.zup.minhamusicafavorita.*
 import br.com.zup.minhamusicafavorita.databinding.FragmentAlbunsBinding
-import br.com.zup.minhamusicafavorita.detalhes.albuns.view.adapter.AlbumAdapter
-import br.com.zup.minhamusicafavorita.detalhes.albuns.model.Album
-import br.com.zup.minhamusicafavorita.detalhes.albuns.viewmodel.AlbumViewModel
+import br.com.zup.minhamusicafavorita.detalhe.view.adapter.AlbumAdapter
+import br.com.zup.minhamusicafavorita.detalhe.model.Album
+import br.com.zup.minhamusicafavorita.detalhe.viewmodel.AlbumViewModel
+import br.com.zup.minhamusicafavorita.albumselecionado.view.AlbumSelecionadoActivity
 
 class AlbunsFragment : Fragment() {
     private lateinit var binding: FragmentAlbunsBinding
@@ -166,7 +166,7 @@ class AlbunsFragment : Fragment() {
     }
 
     private fun irParaDetalheAlbum(album: Album) {
-        val intent = Intent(context, AlbunsActivity::class.java).apply {
+        val intent = Intent(context, AlbumSelecionadoActivity::class.java).apply {
             putExtra(ALBUM_KEY, album)
         }
         startActivity(intent)
