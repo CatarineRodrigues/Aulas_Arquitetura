@@ -22,46 +22,48 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
-
-
+        registerConpleted()
+        observer()
     }
 
-    private fun registerConpleted(){
+    private fun registerConpleted() {
         binding.bvLogin.setOnClickListener {
-            val user = getInformation()
-            confirmation(user)
-            viewModel.getRegistration(user)
-        }
-
-        startActivity(Intent(this, HomeActivity::class.java))
-    }
-
-    private fun getInformation(): RegisterModel{
-        val userName = binding.etUserNameRegister.text.toString()
-        val userEmail = binding.etEmailRegister.text.toString()
-        val password = binding.etPasswordRegister.text.toString()
-        val passwordConfirmation = binding.etConfirmPasswordRegister.text.toString()
-
-        return RegisterModel(
-            userName = userName,
-            userEmail = userEmail,
-            password = password,
-            passwordConfirmation = passwordConfirmation
-        )
-    }
-
-    private fun confirmation(newUser: RegisterModel): Boolean{
-        viewModel.response(this){
-            return if(newUser.password == newUser.passwordConfirmation){
-                Toast.makeText(this, "Cadastro Concluído", Toast.LENGTH_LONG).show()
-                true
-            }else{
-                Toast.makeText(this, "As senhas devem ser iguais", Toast.LENGTH_LONG).show()
-                false
+            if (passwordValidation()) {
+                val user = getInformation()
+                viewModel.getRegistration(user)
             }
         }
     }
 
+    private fun observer() {
+        viewModel.response.observe(this) {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+    }
+
+    private fun getInformation(): RegisterModel {
+        val userName = binding.etUserNameRegister.text.toString()
+        val userEmail = binding.etEmailRegister.text.toString()
+        val password = binding.etPasswordRegister.text.toString()
+//        val passwordConfirmation = binding.etConfirmPasswordRegister.text.toString()
+
+        return RegisterModel(
+            userName = userName,
+            userEmail = userEmail,
+            password = password
+        )
+    }
+
+    private fun passwordValidation(): Boolean {
+        val password = binding.etPasswordRegister.text.toString()
+        val passwordConfirmation = binding.etConfirmPasswordRegister.text.toString()
+
+        return if (password == passwordConfirmation) {
+            //            Toast.makeText(this, "Cadastro Concluído", Toast.LENGTH_LONG).show()
+            true
+        } else {
+            Toast.makeText(this, "As senhas devem ser iguais", Toast.LENGTH_LONG).show()
+            false
+        }
+    }
 }
