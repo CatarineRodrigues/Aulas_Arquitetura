@@ -3,17 +3,9 @@ import br.com.zup.movieflix.register.model.RegisterModel
 
 class RegisterRepository {
 
-    fun registration(): List<RegisterModel> {
+    fun registration(user: RegisterModel): List<RegisterModel> {
         val listRegister = mutableListOf<RegisterModel>()
-        listRegister.add(getUser())
+        listRegister.add(user)
         return listRegister
-    }
-
-    private fun getUser(): RegisterModel {
-        return RegisterModel(
-            userName = "",
-            userEmail = "",
-            password = "",
-            passwordConfirmation = "")
     }
 }

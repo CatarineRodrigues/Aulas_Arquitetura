@@ -13,9 +13,9 @@ class RegisterViewModel() : ViewModel() {
     private val _response: MutableLiveData<List<RegisterModel>> = MutableLiveData()
     val response: LiveData<List<RegisterModel>> = _response
 
-    fun getRegistration(){
+    fun getRegistration(user: RegisterModel){
         try {
-            _response.value = repository.registration()
+            _response.value = repository.registration(user)
         }catch (ex: Exception){
             Log.i("Error", "------> ${ex.message}")
         }
